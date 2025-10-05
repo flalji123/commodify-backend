@@ -3,7 +3,7 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-# Write DB to /tmp (always writable on Render). You can override with env DB_PATH later.
+# Write DB to /tmp (always writable on Render)
 DB_PATH = os.getenv("DB_PATH", "/tmp/commodify.db")
 SQLALCHEMY_DATABASE_URL = f"sqlite:///{DB_PATH}"
 
